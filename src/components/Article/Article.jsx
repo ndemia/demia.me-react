@@ -1,12 +1,19 @@
-export default function Article(props) {
-	const { title, paragraphs } = props;
+import { StyledArticle } from './Article.styled';
+import ArticleTitle from './../ArticleTitle/ArticleTitle';
+import ArticleParagraph from './../ArticleParagraph/ArticleParagraph';
 
+export default function Article({ content }) {
 	return (
-		<article>
-			<p>
-				Lorem ipsum dolor sit amet consectetur, adipisicing elit. Magnam officia dicta minima assumenda ad molestias aut, dolorum voluptas! Expedita
-				eligendi natus voluptatibus, in adipisci laboriosam recusandae ipsam at a vero?
-			</p>
-		</article>
+		<StyledArticle>
+			{content.map((item, index) => {
+				if (item.type === 'title') {
+					return <ArticleTitle key={index} text={item.text}></ArticleTitle>;
+				} else if (item.type === 'paragraph') {
+					return <ArticleParagraph key={index} text={item.text}></ArticleParagraph>;
+				} else {
+					return null;
+				}
+			})}
+		</StyledArticle>
 	);
 }
