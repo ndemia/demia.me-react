@@ -5,7 +5,7 @@ import MainTitle from '../../components/MainTitle/MainTitle';
 export default function Home() {
 	return (
 		<StyledLayoutContainer>
-			<Header>{/* <MainTitle></MainTitle> */}</Header>
+			<Header></Header>
 		</StyledLayoutContainer>
 	);
 }
