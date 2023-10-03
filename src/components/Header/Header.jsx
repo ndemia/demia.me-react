@@ -1,5 +1,5 @@
 import MainTitle from './../MainTitle/MainTitle';
-import MainSubtitle from '../MainSubTitle/MainSubTitle';
+import MainSubtitle from './../MainSubTitle/MainSubTitle';
 
 import { StyledHeader } from './Header.styled';
 
