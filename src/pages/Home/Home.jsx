@@ -1,6 +1,7 @@
 import { StyledLayoutContainer } from './../../components/LayoutContainer/LayoutContainer.styled';
 import Header from './../../components/Header/Header';
 import RightSection from './../../components/RightSection/RightSection';
+import Main from './../../components/Main/Main';
 
 export default function Home() {
 	const content = [
@@ -12,19 +13,19 @@ export default function Home() {
 		},
 		{
 			type: 'paragraph',
-			text: " I'd love to tell you that I've been programming daily since my first course back in 2006 (HTML, CSS, Flash + ActionScript), but that wouldn't be true. I got carried away into the visual side, and studied Graphic Design. Nonetheless, my passion for computers, code and the internet remained.",
+			text: "I'd love to tell you that I've been programming daily since my first course back in 2006 (HTML, CSS, Flash + ActionScript), but that wouldn't be true. I got carried away into the visual side, and studied Graphic Design. Nonetheless, my passion for computers, code and the internet remained.",
 		},
 		{
 			type: 'paragraph',
-			text: " During my career as a designer, I never left code's side for very long. I often found myself looking for ways in which I could code my design work. I always felt comfortable at the intersection between design and development, not quite satisfied to stay on either side. I just love when flat, static designs become real, usable interfaces to interact with. ",
+			text: "During my career as a designer, I never left code's side for very long. I often found myself looking for ways in which I could code my design work. I always felt comfortable at the intersection between design and development, not quite satisfied to stay on either side. I just love when flat, static designs become real, usable interfaces to interact with. ",
 		},
 		{
 			type: 'paragraph',
-			text: " Today, and I find myself wanting to experience more of the other side. I now spend my time honing my front-end skills, drawing from open knowledge to teach myself, and having fun. I'm seeking a front-end position that lets me make a real impact and help a company on their journey to success. ",
+			text: "Today, and I find myself wanting to experience more of the other side. I now spend my time honing my front-end skills, drawing from open knowledge to teach myself, and having fun. I'm seeking a front-end position that lets me make a real impact and help a company on their journey to success. ",
 		},
 		{
 			type: 'paragraph',
-			text: " When I'm not in front of the computer you can find me cycling, watching movies, listening to music, or playing retro videogames from my childhood.  ",
+			text: "When I'm not in front of the computer you can find me cycling, watching movies, listening to music, or playing retro videogames from my childhood.  ",
 		},
 	];
 
@@ -32,6 +33,7 @@ export default function Home() {
 		<StyledLayoutContainer>
 			<Header></Header>
 			<RightSection content={content}></RightSection>
+			<Main></Main>
 		</StyledLayoutContainer>
 	);
 }
