@@ -1,7 +1,7 @@
-import { StyledLayoutContainer } from './../../components/LayoutContainer/LayoutContainer.styled';
-import Header from './../../components/Header/Header';
-import RightSection from './../../components/RightSection/RightSection';
-import Main from './../../components/Main/Main';
+import { StyledLayoutContainer } from '../../components/LayoutContainer/LayoutContainer.styled';
+import Header from '../../components/Header/Header';
+import RightSection from '../../components/RightSection/RightSection';
+import Main from '../../components/Main/Main';
 import Footer from '../../components/Footer/Footer';
 
 export default function Home() {
@@ -10,7 +10,7 @@ export default function Home() {
 		{ type: 'paragraph', text: "Hi, I'm Nicolás! 👋" },
 		{
 			type: 'paragraph',
-			text: "Fascinated by computers, I've been sitting in front of them since I was 6 years old. My first one only had MS-DOS, and it came with an amber monitor.",
+			text: "Fascinated by computers, I've been sitting in front of them since I was 6 years old. My first one only had MS-DOS, and it came with an [amber monitor.](https://www.google.com/search?q=amber+monitor+dos&tbm=isch&ved=2ahUKEwjak-y6yp-AAxVUxgIHHerQBj0Q0pQJegQIFRAB)",
 		},
 		{
 			type: 'paragraph',
@@ -26,7 +26,7 @@ export default function Home() {
 		},
 		{
 			type: 'paragraph',
-			text: "When I'm not in front of the computer you can find me cycling, watching movies, listening to music, or playing retro videogames from my childhood.  ",
+			text: "When I'm not in front of the computer you can find me cycling, [watching movies](https://letterboxd.com/ndemia/), [listening to music](https://bandcamp.com/ndemia), or [playing retro videogames](https://www.retroarch.com/) from my childhood.  ",
 		},
 	];
 
