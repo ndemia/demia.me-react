@@ -2,6 +2,7 @@ import { StyledLayoutContainer } from './../../components/LayoutContainer/Layout
 import Header from './../../components/Header/Header';
 import RightSection from './../../components/RightSection/RightSection';
 import Main from './../../components/Main/Main';
+import Footer from '../../components/Footer/Footer';
 
 export default function Home() {
 	const content = [
@@ -34,6 +35,7 @@ export default function Home() {
 			<Header></Header>
 			<RightSection content={content}></RightSection>
 			<Main></Main>
+			<Footer></Footer>
 		</StyledLayoutContainer>
 	);
 }
