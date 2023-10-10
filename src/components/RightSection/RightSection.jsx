@@ -1,5 +1,5 @@
 import { StyledRightSection } from './RightSection.styled';
-import Article from './../Article/Article';
+import Article from '../Article/Article';
 
 export default function RightSection({ content }) {
 	return (

@@ -1,6 +1,6 @@
-import MainTitle from './../MainTitle/MainTitle';
-import MainSubtitle from './../MainSubtitle/MainSubtitle';
-import Socials from './../Socials/Socials';
+import MainTitle from '../MainTitle/MainTitle';
+import MainSubtitle from '../MainSubtitle/MainSubtitle';
+import Socials from '../Socials/Socials';
 
 import { StyledHeader } from './Header.styled';
 

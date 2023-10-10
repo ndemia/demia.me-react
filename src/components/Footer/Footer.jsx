@@ -1,4 +1,5 @@
 import { StyledFooter } from './Footer.styled';
+
 export default function Footer() {
 	const currently = {
 		book: 'History of Beauty',

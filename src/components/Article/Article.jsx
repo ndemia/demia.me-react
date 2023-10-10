@@ -1,6 +1,6 @@
 import { StyledArticle } from './Article.styled';
-import ArticleTitle from './../ArticleTitle/ArticleTitle';
-import ArticleParagraph from './../ArticleParagraph/ArticleParagraph';
+import ArticleTitle from '../ArticleTitle/ArticleTitle';
+import ArticleParagraph from '../ArticleParagraph/ArticleParagraph';
 import InlineLink from '../InlineLink/InlineLink';
 
 export default function Article({ content }) {
