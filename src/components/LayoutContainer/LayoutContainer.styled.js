@@ -5,6 +5,7 @@ export const StyledLayoutContainer = styled.div`
 	display: grid;
 	grid-template-columns: 1fr;
 	grid-template-rows: repeat(2, auto);
+	padding: 0 1rem;
 
 	@media (min-width: 60em) {
 		margin: 0 auto;
