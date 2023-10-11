@@ -1,4 +1,5 @@
 import { StyledMainTitle } from './MainTitle.styled';
-export default function MainTitle() {
-	return <StyledMainTitle>Nicolás Demianiw</StyledMainTitle>;
+
+export default function MainTitle({ title }) {
+	return <StyledMainTitle>{title}</StyledMainTitle>;
 }

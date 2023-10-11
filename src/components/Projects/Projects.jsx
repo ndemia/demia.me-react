@@ -12,8 +12,9 @@ export default function Projects() {
 			image_1x: '/images/marketplace_1x.png',
 			image_2x: '/images/marketplace_2x.png',
 			alt: 'A modal window serving as a market for medieval items like swords and shields.',
+			link: '/marketplace',
 			tags: ['HTML', 'CSS', 'TypeScript'],
-			id: 1,
+			id: 'marketplace',
 		},
 		{
 			title: 'Movie search',
@@ -21,17 +22,19 @@ export default function Projects() {
 			image_1x: '/images/movie_1x.png',
 			image_2x: '/images/movie_2x.png',
 			alt: 'Movie search results.',
+			link: '/movie',
 			tags: ['HTML', 'CSS', 'TypeScript'],
-			id: 2,
+			id: 'movie',
 		},
 		{
 			title: 'Daily UI',
 			description: 'A collection of different UIs designed and built by me.',
 			image_1x: '/images/dailyui_1x.png',
 			image_2x: '/images/dailyui_2x.png',
+			link: '/daily',
 			alt: 'A calculator made over a grandient background.',
 			tags: ['HTML', 'CSS', 'JavaScript'],
-			id: 3,
+			id: 'daily',
 		},
 		{
 			title: 'Flight Search',
@@ -39,8 +42,9 @@ export default function Projects() {
 			image_1x: '/images/flight_1x.png',
 			image_2x: '/images/flight_2x.png',
 			alt: 'Flight search form showing previous results.',
+			link: '/flight',
 			tags: ['HTML', 'CSS', 'TypeScript'],
-			id: 4,
+			id: 'flight',
 		},
 	]);
 

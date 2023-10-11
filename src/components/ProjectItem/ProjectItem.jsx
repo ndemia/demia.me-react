@@ -1,9 +1,10 @@
+import { Link } from 'react-router-dom';
 import { StyledProjectItem } from './ProjectItem.styled';
 
-export default function ProjectItem({ title, description, image_1x, image_2x, alt, tags, id }) {
+export default function ProjectItem({ title, description, image_1x, image_2x, alt, link, tags, id }) {
 	return (
 		<StyledProjectItem>
-			<a href="/marketplace.html">
+			<Link to={link} state={{ title }}>
 				<div>
 					<figure>
 						<img srcSet={`${image_1x} 700w, ${image_2x} 1280w`} sizes="(min-width: 960px) 1280px, 700px" src={image_1x} alt={alt} />
@@ -23,7 +24,7 @@ export default function ProjectItem({ title, description, image_1x, image_2x, al
 						</ul>
 					</section>
 				</div>
-			</a>
+			</Link>
 		</StyledProjectItem>
 	);
 }
