@@ -33,7 +33,7 @@ export default function Home() {
 	return (
 		<StyledLayoutContainer>
 			<Header title="Nicolás Demianiw"></Header>
-			<RightSection content={content}></RightSection>
+			<RightSection content={content} type="description"></RightSection>
 			<Main></Main>
 			<Footer></Footer>
 		</StyledLayoutContainer>

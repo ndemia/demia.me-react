@@ -16,7 +16,7 @@ export default function ProjectDetails() {
 		<StyledLayoutContainer>
 			<Navigation></Navigation>
 			<ProjectHeader title={state.title}></ProjectHeader>
-			{project && <RightSection content={project}></RightSection>}
+			{project && <RightSection content={project} type="project"></RightSection>}
 			<Footer></Footer>
 		</StyledLayoutContainer>
 	);

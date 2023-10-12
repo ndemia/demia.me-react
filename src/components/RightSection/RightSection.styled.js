@@ -6,8 +6,8 @@ export const StyledRightSection = styled.section`
 
 	@media (min-width: 60em) {
 		grid-column-start: 2;
-		grid-column-end: 2;
-		grid-row-start: 1;
+		grid-column-end: ${(props) => (props.type === 'project' ? 3 : 2)};
+		grid-row-start: ${(props) => (props.type === 'project' ? 2 : 1)};
 		grid-row-end: 2;
 		padding: 6rem 1rem 0 0;
 		margin-bottom: 0;
