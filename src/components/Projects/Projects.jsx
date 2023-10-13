@@ -15,6 +15,8 @@ export default function Projects() {
 			link: '/marketplace',
 			tags: ['HTML', 'CSS', 'TypeScript'],
 			id: 'marketplace',
+			github: 'https://github.com/ndemia/marketplace',
+			demo: 'https://ndemia.github.io/marketplace/',
 		},
 		{
 			title: 'Movie search',
@@ -25,6 +27,8 @@ export default function Projects() {
 			link: '/movie',
 			tags: ['HTML', 'CSS', 'TypeScript'],
 			id: 'movie',
+			github: 'https://github.com/ndemia/movie-search',
+			demo: 'https://ndemia-movie.netlify.app/',
 		},
 		{
 			title: 'Daily UI',
@@ -35,6 +39,8 @@ export default function Projects() {
 			alt: 'A calculator made over a grandient background.',
 			tags: ['HTML', 'CSS', 'JavaScript'],
 			id: 'daily',
+			github: 'https://github.com/ndemia/daily-ui',
+			demo: 'https://ndemia.github.io/daily-ui/',
 		},
 		{
 			title: 'Flight Search',
@@ -45,6 +51,8 @@ export default function Projects() {
 			link: '/flight',
 			tags: ['HTML', 'CSS', 'TypeScript'],
 			id: 'flight',
+			github: 'https://github.com/ndemia/flight-search',
+			demo: 'https://ndemia.github.io/flight-search/',
 		},
 	]);
 
