@@ -9,4 +9,36 @@ export const StyledProjectHeader = styled(StyledHeader)`
 		grid-row-end: 2;
 		padding-top: 0;
 	}
+
+	figure {
+		position: relative;
+		top: 0;
+		left: 0;
+		border: 1px solid ${({ theme }) => theme.colors.beige03};
+		background-color: ${({ theme }) => theme.colors.beige03};
+		transition: all 200ms ease-in-out;
+		margin-bottom: 1.5rem;
+
+		&::after {
+			content: '';
+			width: 100%;
+			height: 100%;
+			position: absolute;
+			top: 8px;
+			left: 8px;
+			z-index: -1;
+			border: 1px solid ${({ theme }) => theme.colors.beige03};
+			transition: all 200ms ease-in-out;
+		}
+
+		img {
+			display: block;
+			width: 100%;
+		}
+	}
+
+	ul {
+		list-style-type: none;
+		padding-left: 0.5625rem;
+	}
 `;

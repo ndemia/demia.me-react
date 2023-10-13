@@ -1,7 +1,7 @@
 import { Routes, Route } from 'react-router-dom';
 
 import Home from './pages/Home/Home';
-import ProjectDetails from './pages/ProjectDetails/PojectDetails';
+import ProjectDetails from './pages/ProjectDetails/ProjectDetails';
 
 import { GlobalStyles } from './theme/Global.styled';
 import DefaultTheme from './theme/default/DefaultTheme';
