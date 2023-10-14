@@ -1,6 +1,7 @@
 import { StyledArticle } from './Article.styled';
 import ArticleTitle from '../ArticleTitle/ArticleTitle';
 import ArticleParagraph from '../ArticleParagraph/ArticleParagraph';
+import ArticleList from '../ArticleList/ArticleList';
 import InlineLink from '../InlineLink/InlineLink';
 
 export default function Article({ content }) {
@@ -30,6 +31,8 @@ export default function Article({ content }) {
 					return <ArticleTitle key={index} text={item.text}></ArticleTitle>;
 				} else if (item.type === 'paragraph') {
 					return <ArticleParagraph key={index} text={renderParagraphWithLinks(item.text)}></ArticleParagraph>;
+				} else if (item.type === 'list') {
+					return <ArticleList key={index} listItems={item.items}></ArticleList>;
 				} else {
 					return null;
 				}
