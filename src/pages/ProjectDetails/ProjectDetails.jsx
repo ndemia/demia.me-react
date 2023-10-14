@@ -13,7 +13,7 @@ export default function ProjectDetails() {
 	const [project, setProject] = useState({});
 
 	const fetchProjects = async () => {
-		let response = await fetch('../../src/data/projects.json');
+		let response = await fetch('/data/projects.json');
 		let data = await response.json();
 		return data.projects;
 	};

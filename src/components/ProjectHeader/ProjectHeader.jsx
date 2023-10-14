@@ -3,7 +3,6 @@ import MainTitle from '../MainTitle/MainTitle';
 import InlineLink from '../InlineLink/InlineLink';
 
 export default function ProjectHeader({ project: { title, image_1x, image_2x, alt, github, demo } }) {
-	console.log(image_1x);
 	return (
 		<StyledProjectHeader>
 			<MainTitle title={title}></MainTitle>
