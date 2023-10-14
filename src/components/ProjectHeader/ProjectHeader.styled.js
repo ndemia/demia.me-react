@@ -17,7 +17,7 @@ export const StyledProjectHeader = styled(StyledHeader)`
 		border: 1px solid ${({ theme }) => theme.colors.beige03};
 		background-color: ${({ theme }) => theme.colors.beige03};
 		transition: all 200ms ease-in-out;
-		margin-bottom: 1.5rem;
+		margin: 1.5rem 0;
 
 		&::after {
 			content: '';

@@ -9,7 +9,7 @@ export const StyledRightSection = styled.section`
 		grid-column-end: ${(project) => (project.type === 'project' ? 3 : 2)};
 		grid-row-start: ${(project) => (project.type === 'project' ? 2 : 1)};
 		grid-row-end: 2;
-		padding: ${(project) => (project.type === 'project' ? '3rem 1rem 0 0' : '6rem 1rem 0 0')};
+		padding: ${(project) => (project.type === 'project' ? '4rem 1rem 0 0' : '6rem 1rem 0 0')};
 		margin-bottom: 0;
 	}
 `;
