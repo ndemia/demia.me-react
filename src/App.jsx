@@ -1,13 +1,20 @@
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { Routes, Route } from 'react-router-dom';
 
 import Home from './pages/Home/Home';
 import ProjectDetails from './pages/ProjectDetails/ProjectDetails';
 
+import { ThemeProvider } from 'styled-components';
 import { GlobalStyles } from './theme/Global.styled';
-import DefaultTheme from './theme/default/DefaultTheme';
+import { defaultTheme, dosTheme } from './theme/Themes';
 
 export default function App() {
+	const [theme, setTheme] = useState('default');
+
+	const themeToggler = () => {
+		theme === 'default' ? setTheme('dos') : setTheme('default');
+	};
+
 	// Change favicon according to theme
 	const checkDarkMode = () => {
 		// In case browser's dark theme is enabled. Returns boolean
@@ -27,14 +34,14 @@ export default function App() {
 	}, []);
 
 	return (
-		<DefaultTheme>
+		<ThemeProvider theme={theme === 'default' ? defaultTheme : dosTheme}>
 			<>
 				<GlobalStyles />
 				<Routes>
-					<Route index element={<Home />}></Route>
+					<Route index element={<Home themeToggler={themeToggler} theme={theme} />}></Route>
 					<Route path="/:id" element={<ProjectDetails />}></Route>
 				</Routes>
 			</>
-		</DefaultTheme>
+		</ThemeProvider>
 	);
 }

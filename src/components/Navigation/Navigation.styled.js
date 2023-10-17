@@ -16,7 +16,7 @@ export const StyledNavigation = styled.nav`
 		color: ${({ theme }) => theme.colors.beige01};
 		display: inline-flex;
 		align-items: center;
-		transition: all 200ms ease-in-out;
+		transition: ${({ theme }) => theme.transition};
 
 		&:hover {
 			color: ${({ theme }) => theme.colors.beige03};
@@ -36,7 +36,7 @@ export const StyledNavigation = styled.nav`
 			height: 1rem;
 			margin-right: 0.25rem;
 			fill: ${({ theme }) => theme.colors.beige01};
-			transition: all 200ms ease-in-out;
+			transition: ${({ theme }) => theme.transition};
 		}
 	}
 `;

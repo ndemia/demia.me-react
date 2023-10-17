@@ -110,18 +110,14 @@ export const GlobalStyles = createGlobalStyle`
     }
   }
 
-  :root {
-    --amber-01: hsl(41, 100%, 50%);
-    --amber-02: hsl(41, 100%, 40%);
-  }
-
   body {
-    font-family: 'Work Sans', 'Inter', 'Open Sans', sans-serif;
-    font-size: 1rem;
-    line-height: 1.5;
-    color: {({theme}) => theme.colors.black};
     position: relative;
-    background: linear-gradient(to bottom right, hsl(260, 6%, 35%) 0%, hsl(260, 6%, 15%) 100%);
+    font-family: ${({ theme }) => theme.fonts};
+    font-size: ${({ theme }) => theme.fontSizes.base};
+    line-height: ${({ theme }) => theme.lineHeight.base};
+    letter-spacing: ${({ theme }) => theme.letterSpacing.base};
+    color: ${({ theme }) => theme.colors.black};
+    background: ${({ theme }) => theme.background};
   }
 
   .sr-only {

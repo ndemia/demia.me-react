@@ -7,7 +7,7 @@ export const StyledProjectItem = styled.li`
 		display: block;
 		padding-bottom: 1rem;
 		text-decoration: none;
-		transition: all 200ms ease-in-out;
+		transition: ${({ theme }) => theme.transition};
 
 		&:hover,
 		&:focus {
@@ -58,7 +58,7 @@ export const StyledProjectItem = styled.li`
 		left: 0;
 		border: 1px solid ${({ theme }) => theme.colors.beige03};
 		background-color: ${({ theme }) => theme.colors.beige03};
-		transition: all 200ms ease-in-out;
+		transition: ${({ theme }) => theme.transition};
 
 		&::after {
 			content: '';
@@ -69,7 +69,7 @@ export const StyledProjectItem = styled.li`
 			left: 8px;
 			z-index: -1;
 			border: 1px solid ${({ theme }) => theme.colors.beige03};
-			transition: all 200ms ease-in-out;
+			transition: ${({ theme }) => theme.transition};
 		}
 	}
 
@@ -77,7 +77,7 @@ export const StyledProjectItem = styled.li`
 		display: block;
 		width: 100%;
 		filter: grayscale(60%);
-		transition: filter 200ms ease-in-out;
+		transition: filter ${({ theme }) => theme.transition};
 	}
 
 	section {
@@ -114,7 +114,7 @@ export const StyledProjectItem = styled.li`
 		margin-left: 0.25rem;
 		opacity: 0;
 		transform: translateX(-15px);
-		transition: all 200ms ease-in-out;
+		transition: ${({ theme }) => theme.transition};
 	}
 
 	p {

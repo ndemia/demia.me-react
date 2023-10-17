@@ -4,7 +4,7 @@ export const StyledMainSubtitle = styled.h2`
 	display: inline-flex;
 	font-size: clamp(1rem, 1vw + 1rem, 2.5rem);
 	color: ${({ theme }) => theme.colors.beigeGrey01};
-	font-weight: 400;
+	font-weight: ${({ theme }) => theme.fontWeights.regular};
 	line-height: 1.1;
 	letter-spacing: -0.8px;
 	padding-bottom: 1rem;

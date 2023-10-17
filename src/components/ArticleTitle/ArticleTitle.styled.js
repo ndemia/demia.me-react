@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 export const StyledArticleTitle = styled.h3`
 	width: fit-content;
-	font-weight: 700;
+	font-weight: ${({ theme }) => theme.fontWeights.bold};
 	color: ${({ theme }) => theme.colors.beige01};
 	text-transform: uppercase;
 	letter-spacing: 1px;

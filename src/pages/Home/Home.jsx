@@ -6,7 +6,7 @@ import RightSection from '../../components/RightSection/RightSection';
 import Main from '../../components/Main/Main';
 import Footer from '../../components/Footer/Footer';
 
-export default function Home() {
+export default function Home({ themeToggler, theme }) {
 	const [description, setDescription] = useState({});
 
 	const fetchDescription = async () => {
@@ -25,8 +25,8 @@ export default function Home() {
 
 	return (
 		<StyledLayoutContainer>
-			<Header title="Nicolás Demianiw"></Header>
-			{description && <RightSection project={description} type="description"></RightSection>}
+			<Header title="Nicolás Demianiw" themeToggler={themeToggler}></Header>
+			{description && <RightSection project={description} type="description" theme={theme}></RightSection>}
 			<Main></Main>
 			<Footer></Footer>
 		</StyledLayoutContainer>

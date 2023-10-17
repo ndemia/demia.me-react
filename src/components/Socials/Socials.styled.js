@@ -21,7 +21,7 @@ export const StyledSocials = styled.div`
 		align-items: center;
 		padding: 0.25rem;
 		color: ${({ theme }) => theme.colors.beige01};
-		transition: all 200ms ease-in-out;
+		transition: ${({ theme }) => theme.transition};
 
 		&:hover {
 			color: ${({ theme }) => theme.colors.beige03};
@@ -50,7 +50,7 @@ export const StyledSocials = styled.div`
 			width: 1.5rem;
 			height: 1.5rem;
 			fill: ${({ theme }) => theme.colors.beige01};
-			transition: all 200ms ease-in-out;
+			transition: ${({ theme }) => theme.transition};
 			position: relative;
 		}
 	}

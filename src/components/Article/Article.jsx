@@ -4,7 +4,7 @@ import ArticleParagraph from '../ArticleParagraph/ArticleParagraph';
 import ArticleList from '../ArticleList/ArticleList';
 import InlineLink from '../InlineLink/InlineLink';
 
-export default function Article({ content }) {
+export default function Article({ content, theme }) {
 	const renderParagraphWithLinks = (text) => {
 		const textParts = text.split(/\[([^\]]+)\]\(([^)]+)\)/g);
 
@@ -13,7 +13,7 @@ export default function Article({ content }) {
 				// This is a link text
 				const linkText = part;
 				const linkUrl = textParts[index + 1];
-				return <InlineLink key={index} to={linkUrl} text={linkText}></InlineLink>;
+				return <InlineLink key={index} to={linkUrl} text={linkText} theme={theme}></InlineLink>;
 			} else if (index % 3 === 2) {
 				// This is a link URL
 				return null;

@@ -5,7 +5,7 @@ export const StyledInlineLink = styled.a`
 	display: inline-flex;
 	align-items: center;
 	color: ${({ theme }) => theme.colors.beige01};
-	transition: all 200ms ease-in-out;
+	transition: ${({ theme }) => theme.transition};
 
 	&:hover {
 		color: ${({ theme }) => theme.colors.beige03};
@@ -31,6 +31,6 @@ export const StyledInlineLink = styled.a`
 		height: 0.9rem;
 		margin-left: 0.25rem;
 		fill: ${({ theme }) => theme.colors.beige02};
-		transition: all 200ms ease-in-out;
+		transition: ${({ theme }) => theme.transition};
 	}
 `;
