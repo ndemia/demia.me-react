@@ -15,23 +15,25 @@ export default function App() {
 		theme === 'default' ? setTheme('dos') : setTheme('default');
 	};
 
-	// Change favicon according to theme
-	const checkDarkMode = () => {
-		// In case browser's dark theme is enabled. Returns boolean
-		let isDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+	// Change favicon according to theme.
+	const adaptFavicon = () => {
+		// Check for browser's active theme. Returns a boolean.
+		const isDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+		const activeTheme = theme;
+		const faviconLink = document.querySelector('link[type="image/svg+xml"]');
 
-		// Check for DOS mode as it has its own favicon
-		let isDos = document.documentElement.classList.contains('dos-theme');
-
-		// If dark true, and there's no DOS mode, show white favicon
-		if (isDark === true && isDos === false) {
-			document.querySelector('link[type="image/svg+xml"]').href = '/favicons/favicon-white.svg';
+		if (activeTheme === 'dos') {
+			faviconLink.href = '/favicons/dos-favicon.ico';
+		} else if (activeTheme === 'default' && isDark === true) {
+			faviconLink.href = '/favicons/favicon-white.svg';
+		} else {
+			faviconLink.href = '/favicons/favicon-black.svg';
 		}
 	};
 
 	useEffect(() => {
-		checkDarkMode();
-	}, []);
+		adaptFavicon();
+	}, [theme]);
 
 	return (
 		<ThemeProvider theme={theme === 'default' ? defaultTheme : dosTheme}>
