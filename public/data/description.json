@@ -1,7 +1,7 @@
 {
 	"content": [
 		{ "type": "title", "text": "About" },
-		{ "type": "paragraph", "text": "Hi, I'm Nicolás! 👋" },
+		{ "type": "paragraph", "text": "Hi, I'm Nicolás!" },
 		{
 			"type": "paragraph",
 			"text": "Fascinated by computers, I've been sitting in front of them since I was 6 years old. My first one only had MS-DOS, and it came with an [amber monitor.](https://www.google.com/search?q=amber+monitor+dos&tbm=isch&ved=2ahUKEwjak-y6yp-AAxVUxgIHHerQBj0Q0pQJegQIFRAB)"
