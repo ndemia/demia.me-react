@@ -1,6 +1,7 @@
-import { ThemeConsumer } from 'styled-components';
 import { Link } from 'react-router-dom';
+import { ThemeConsumer } from 'styled-components';
 import { StyledProjectItem } from './ProjectItem.styled';
+import Image from '../Image/Image';
 
 export default function ProjectItem({ title, description, image_1x, image_2x, alt, link, tags, id }) {
 	return (
@@ -9,9 +10,7 @@ export default function ProjectItem({ title, description, image_1x, image_2x, al
 				<StyledProjectItem>
 					<Link to={link} state={title}>
 						<div>
-							<figure>
-								<img srcSet={`${image_1x} 700w, ${image_2x} 1280w`} sizes="(min-width: 960px) 1280px, 700px" src={image_1x} alt={alt} />
-							</figure>
+							<Image image_1x={image_1x} image_2x={image_2x} alt={alt} />
 							<section>
 								<header>
 									<h4>{title}</h4>

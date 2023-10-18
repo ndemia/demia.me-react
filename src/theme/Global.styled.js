@@ -133,4 +133,8 @@ export const GlobalStyles = createGlobalStyle`
   .hidden {
     display: none;
   }
+
+  a:visited {
+    color: ${({ theme }) => theme.colors.beige01}
+  }
 `;

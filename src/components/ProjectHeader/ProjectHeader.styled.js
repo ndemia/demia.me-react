@@ -11,34 +11,15 @@ export const StyledProjectHeader = styled(StyledHeader)`
 	}
 
 	figure {
-		position: relative;
-		top: 0;
-		left: 0;
-		border: 1px solid ${({ theme }) => theme.colors.beige03};
-		background-color: ${({ theme }) => theme.colors.beige03};
-		transition: ${({ theme }) => theme.transition};
-		margin: 1.5rem 0;
+		margin-top: 1.5rem;
+	}
 
-		&::after {
-			content: '';
-			width: 100%;
-			height: 100%;
-			position: absolute;
-			top: 8px;
-			left: 8px;
-			z-index: -1;
-			border: 1px solid ${({ theme }) => theme.colors.beige03};
-			transition: ${({ theme }) => theme.transition};
-		}
-
-		img {
-			display: block;
-			width: 100%;
-		}
+	img {
+		filter: grayscale(0);
 	}
 
 	ul {
 		list-style-type: none;
-		padding-left: 0.5625rem;
+		padding: 1.5rem 0 0 0.5625rem;
 	}
 `;

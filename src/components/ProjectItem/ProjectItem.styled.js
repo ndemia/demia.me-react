@@ -1,8 +1,6 @@
 import styled from 'styled-components';
 
 export const StyledProjectItem = styled.li`
-	list-style-type: none;
-
 	a {
 		display: block;
 		padding-bottom: 1rem;
@@ -50,34 +48,6 @@ export const StyledProjectItem = styled.li`
 	div {
 		display: flex;
 		flex-direction: column;
-	}
-
-	figure {
-		position: relative;
-		top: 0;
-		left: 0;
-		border: 1px solid ${({ theme }) => theme.colors.beige03};
-		background-color: ${({ theme }) => theme.colors.beige03};
-		transition: ${({ theme }) => theme.transition};
-
-		&::after {
-			content: '';
-			width: 100%;
-			height: 100%;
-			position: absolute;
-			top: 8px;
-			left: 8px;
-			z-index: -1;
-			border: 1px solid ${({ theme }) => theme.colors.beige03};
-			transition: ${({ theme }) => theme.transition};
-		}
-	}
-
-	figure img {
-		display: block;
-		width: 100%;
-		filter: grayscale(60%);
-		transition: filter ${({ theme }) => theme.transition};
 	}
 
 	section {
