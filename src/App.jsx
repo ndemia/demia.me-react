@@ -12,7 +12,13 @@ export default function App() {
 	const [theme, setTheme] = useState('default');
 
 	const themeToggler = () => {
-		theme === 'default' ? setTheme('dos') : setTheme('default');
+		if (theme === 'default') {
+			localStorage.setItem('theme', 'dos');
+			setTheme('dos');
+		} else {
+			localStorage.setItem('theme', 'default');
+			setTheme('default');
+		}
 	};
 
 	// Change favicon according to theme.
@@ -32,6 +38,10 @@ export default function App() {
 	};
 
 	useEffect(() => {
+		if (localStorage.getItem('theme') === 'dos') {
+			setTheme('dos');
+			localStorage.setItem('theme', 'dos');
+		}
 		adaptFavicon();
 	}, [theme]);
 
