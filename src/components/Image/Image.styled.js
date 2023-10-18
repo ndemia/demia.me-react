@@ -17,6 +17,10 @@ export const StyledImage = styled.figure`
 		z-index: -1;
 		border: 1px solid ${({ theme }) => theme.colors.beige03};
 		transition: ${({ theme }) => theme.transition};
+		background-image: ${({ theme }) => theme.backgroundImage};
+		background-repeat: ${({ theme }) => theme.backgroundRepeat};
+		background-blend-mode: ${({ theme }) => theme.backgroundBlendMode};
+		background-color: ${({ theme }) => theme.backgroundColor};
 	}
 
 	img {

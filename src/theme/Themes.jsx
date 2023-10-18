@@ -27,6 +27,10 @@ export const defaultTheme = {
 	letterSpacing: {
 		base: 'normal',
 	},
+	backgroundImage: 'none',
+	backgroundRepeat: 'no-repeat',
+	backgroundBlendMode: 'normal',
+	backgroundColor: 'none',
 	background: 'linear-gradient(to bottom right, hsl(260, 6%, 35%) 0%, hsl(260, 6%, 15%) 100%)',
 	transition: 'all 200ms ease-in-out',
 };
@@ -57,6 +61,10 @@ export const dosTheme = {
 	letterSpacing: {
 		base: '-1px',
 	},
+	backgroundImage: 'url(../public/images/pixel.png)',
+	backgroundRepeat: 'repeat',
+	backgroundBlendMode: 'luminosity',
+	backgroundColor: 'hsl(41, 100%, 50%)',
 	background: 'hsl(3, 31%, 10%)',
 	transition: 'none',
 };
