@@ -27,7 +27,7 @@ export const StyledFooter = styled.footer`
 		}
 
 		p:first-of-type {
-			letter-spacing: 0.5px;
+			letter-spacing: ${({ theme }) => theme.letterSpacing.none};
 			color: ${({ theme }) => theme.colors.beige02};
 		}
 	}

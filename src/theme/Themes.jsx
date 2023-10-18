@@ -25,6 +25,7 @@ export const defaultTheme = {
 		base: '1.5',
 	},
 	letterSpacing: {
+		none: 'normal',
 		base: 'normal',
 	},
 	backgroundImage: 'none',
@@ -59,7 +60,8 @@ export const dosTheme = {
 		base: '1.3',
 	},
 	letterSpacing: {
-		base: '-1px',
+		none: '0',
+		base: '-0.5px',
 	},
 	backgroundImage: 'url(../public/images/pixel.png)',
 	backgroundRepeat: 'repeat',

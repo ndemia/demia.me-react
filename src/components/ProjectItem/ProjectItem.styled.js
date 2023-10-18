@@ -63,6 +63,7 @@ export const StyledProjectItem = styled.li`
 
 	h4 {
 		font-size: 1.2rem;
+		font-weight: ${({ theme }) => theme.fontWeights.bold};
 		border-bottom: 1px solid transparent;
 		transition: all 800ms ease-in;
 
@@ -73,7 +74,7 @@ export const StyledProjectItem = styled.li`
 			height: 1px;
 			background-color: ${({ theme }) => theme.colors.beige03};
 			opacity: 0;
-			transition: all 200ms ease-in;
+			transition: ${({ theme }) => (theme.name === 'defaultTheme' ? 'all 200ms ease-in' : theme.transition)};
 		}
 	}
 
