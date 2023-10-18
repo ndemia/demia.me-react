@@ -42,6 +42,11 @@ export default function App() {
 			setTheme('dos');
 			localStorage.setItem('theme', 'dos');
 		}
+
+		if (window.chrome) {
+			document.querySelector('.firefox').classList.remove('hidden');
+		}
+
 		adaptFavicon();
 	}, [theme]);
 

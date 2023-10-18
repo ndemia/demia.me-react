@@ -1,4 +1,5 @@
 import { StyledFooter } from './Footer.styled';
+import InlineLink from '../InlineLink/InlineLink';
 
 export default function Footer() {
 	const currently = {
@@ -27,6 +28,12 @@ export default function Footer() {
 				</article>
 				<article>
 					<span>Made with 🍺. Built with React & Styled Components. Deployed on Netlify.</span>
+				</article>
+				<article className="firefox hidden">
+					<span>
+						Hi again! Consider using &nbsp;
+						<InlineLink to={'https://firefox.com/'} text={'Firefox'} />, a web browser that respects your privacy and the open web.
+					</span>
 				</article>
 			</div>
 		</StyledFooter>
