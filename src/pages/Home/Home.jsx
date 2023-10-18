@@ -25,10 +25,10 @@ export default function Home({ themeToggler }) {
 
 	return (
 		<StyledLayoutContainer>
-			<Header title="Nicolás Demianiw" themeToggler={themeToggler}></Header>
+			<Header title="Nicolás Demianiw" themeToggler={themeToggler} />
 			{description && <RightSection project={description} type="description" />}
-			<Main></Main>
-			<Footer></Footer>
+			<Main />
+			<Footer />
 		</StyledLayoutContainer>
 	);
 }
