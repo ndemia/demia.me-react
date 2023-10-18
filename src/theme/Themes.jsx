@@ -1,4 +1,5 @@
 export const defaultTheme = {
+	name: 'defaultTheme',
 	colors: {
 		white: 'hsl(0, 0%, 100%)',
 		black: 'hsl(0, 0%, 10%)',
@@ -31,6 +32,7 @@ export const defaultTheme = {
 };
 
 export const dosTheme = {
+	name: 'dosTheme',
 	colors: {
 		white: 'hsl(0, 0%, 100%)',
 		black: 'hsl(0, 0%, 10%)',
