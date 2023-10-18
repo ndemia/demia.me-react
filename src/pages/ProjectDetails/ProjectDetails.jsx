@@ -7,7 +7,7 @@ import ProjectHeader from '../../components/ProjectHeader/ProjectHeader';
 import RightSection from '../../components/RightSection/RightSection';
 import Footer from '../../components/Footer/Footer';
 
-export default function ProjectDetails() {
+export default function ProjectDetails({ themeToggler }) {
 	const { id } = useParams();
 	const { state } = useLocation();
 	const [project, setProject] = useState({});
@@ -29,10 +29,10 @@ export default function ProjectDetails() {
 
 	return (
 		<StyledLayoutContainer>
-			<Navigation></Navigation>
-			{project && <ProjectHeader project={project}></ProjectHeader>}
-			{project && <RightSection project={project} type="project"></RightSection>}
-			<Footer></Footer>
+			<Navigation />
+			{project && <ProjectHeader project={project} themeToggler={themeToggler} />}
+			{project && <RightSection project={project} type="project" />}
+			<Footer />
 		</StyledLayoutContainer>
 	);
 }

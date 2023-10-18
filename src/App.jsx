@@ -55,8 +55,8 @@ export default function App() {
 			<>
 				<GlobalStyles />
 				<Routes>
-					<Route index element={<Home themeToggler={themeToggler} theme={theme} />}></Route>
-					<Route path="/:id" element={<ProjectDetails />}></Route>
+					<Route index element={<Home themeToggler={themeToggler} theme={theme} />} />
+					<Route path="/:id" element={<ProjectDetails themeToggler={themeToggler} />} />
 				</Routes>
 			</>
 		</ThemeProvider>
