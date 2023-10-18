@@ -13,11 +13,11 @@ export default function App() {
 
 	const themeToggler = () => {
 		if (theme === 'default') {
-			localStorage.setItem('theme', 'dos');
 			setTheme('dos');
+			localStorage.setItem('theme', 'dos');
 		} else {
-			localStorage.setItem('theme', 'default');
 			setTheme('default');
+			localStorage.setItem('theme', 'default');
 		}
 	};
 

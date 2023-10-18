@@ -26,7 +26,7 @@ export default function Footer() {
 					</p>
 				</article>
 				<article>
-					<span>Built with 🍺, React & Styled Components. Deployed on Netlify.</span>
+					<span>Made with 🍺. Built with React & Styled Components. Deployed on Netlify.</span>
 				</article>
 			</div>
 		</StyledFooter>
