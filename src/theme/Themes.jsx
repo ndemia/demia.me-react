@@ -34,6 +34,11 @@ export const defaultTheme = {
 	backgroundColor: 'none',
 	background: 'linear-gradient(to bottom right, hsl(260, 6%, 35%) 0%, hsl(260, 6%, 15%) 100%)',
 	transition: 'all 200ms ease-in-out',
+	svgSizes: {
+		small: '0.9rem',
+		regular: '1rem',
+		large: '1.5rem',
+	},
 };
 
 export const dosTheme = {
@@ -69,4 +74,9 @@ export const dosTheme = {
 	backgroundColor: 'hsl(41, 100%, 50%)',
 	background: 'hsl(3, 31%, 10%)',
 	transition: 'none',
+	svgSizes: {
+		small: '0.8rem',
+		regular: '1rem',
+		large: '1.5rem',
+	},
 };

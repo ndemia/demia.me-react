@@ -6,13 +6,10 @@ export const StyledSocials = styled.div`
 		flex-direction: row;
 		flex-wrap: wrap;
 		gap: 0.5rem;
+		list-style-type: none;
 
 		@media (min-width: 25em) {
 			gap: 1rem;
-		}
-
-		li {
-			list-style-type: none;
 		}
 	}
 
@@ -35,6 +32,16 @@ export const StyledSocials = styled.div`
 			box-shadow: 0 0 0 4px ${({ theme }) => theme.colors.beige02};
 		}
 
+		${({ theme }) =>
+			theme.name === 'dosTheme'
+				? `&:hover,
+					&:focus {
+						svg {
+							transform: translate(2px, -2px);
+						}
+					}`
+				: ''}
+
 		/* Screen-reader only */
 		span {
 			clip: rect(0 0 0 0);
@@ -47,11 +54,11 @@ export const StyledSocials = styled.div`
 		}
 
 		svg {
-			width: 1.5rem;
-			height: 1.5rem;
+			width: ${({ theme }) => (theme.name === 'defaultTheme' ? theme.svgSizes.large : theme.svgSizes.small)};
+			height: ${({ theme }) => (theme.name === 'defaultTheme' ? theme.svgSizes.large : theme.svgSizes.small)};
+			margin-left: ${({ theme }) => (theme.name === 'defaultTheme' ? '0' : '0.25rem')};
 			fill: ${({ theme }) => theme.colors.beige01};
 			transition: ${({ theme }) => theme.transition};
-			position: relative;
 		}
 	}
 `;
