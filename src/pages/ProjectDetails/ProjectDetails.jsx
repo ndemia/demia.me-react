@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import { useParams, useLocation } from 'react-router-dom';
+import { useProjects } from '../../context/ProjectsContext';
 
 import { StyledLayoutContainer } from '../../components/LayoutContainer/LayoutContainer.styled';
 import Navigation from '../../components/Navigation/Navigation';
@@ -10,24 +11,18 @@ import Footer from '../../components/Footer/Footer';
 export default function ProjectDetails({ themeToggler }) {
 	const { id } = useParams();
 	const { state } = useLocation();
+	const [projects, setProjects] = useProjects();
 	const [project, setProject] = useState({});
 
-	const fetchProjects = async () => {
-		let response = await fetch('/data/projects.json');
-		let data = await response.json();
-		return data.projects;
-	};
-
 	useEffect(() => {
-		fetchProjects()
-			.then((projects) => {
-				let foundItem = projects.find((project) => project.id === id);
-				setProject(foundItem);
-				document.title = `${foundItem.title} - Nicolás Demianiw`;
-			})
-			.catch((error) => {
-				throw new Error(error.message);
-			});
+		// Filter projects to find the correct one to show.
+		let foundItem = projects.find((project) => project.id === id);
+
+		// Set it.
+		setProject(foundItem);
+
+		// Change HTML title.
+		document.title = `${foundItem.title} - Nicolás Demianiw`;
 		return () => {
 			document.title = `Home - Nicolás Demianiw`;
 		};
