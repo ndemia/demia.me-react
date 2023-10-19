@@ -14,7 +14,7 @@ export default function ProjectHeader({ project: { title, image_1x, image_2x, al
 					<InlineLink to={github} text={'GitHub'}></InlineLink>
 				</li>
 				<li>
-					<InlineLink to={demo} text={'Demo'}></InlineLink>
+					<InlineLink to={demo} text={'Live'}></InlineLink>
 				</li>
 			</ul>
 			<Switch themeToggler={themeToggler} />
