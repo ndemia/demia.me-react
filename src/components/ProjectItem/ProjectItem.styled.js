@@ -101,7 +101,7 @@ export const StyledProjectItem = styled.li`
 
 		li {
 			font-size: 0.8rem;
-			font-weight: 500;
+			font-weight: 400;
 			color: ${({ theme }) => theme.colors.beige01};
 			padding: 0.25rem 0.5rem;
 			border: 1px solid ${({ theme }) => theme.colors.beige03};
