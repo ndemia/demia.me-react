@@ -62,7 +62,7 @@ export const GlobalStyles = createGlobalStyle`
 
   /* Set core body defaults */
   body {
-    //min-height: 100vh;
+    min-height: 100vh;
     text-rendering: optimizeSpeed;
   }
 
