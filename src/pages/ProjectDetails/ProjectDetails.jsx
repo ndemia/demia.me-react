@@ -23,8 +23,14 @@ export default function ProjectDetails({ themeToggler }) {
 			.then((projects) => {
 				let foundItem = projects.find((project) => project.id === id);
 				setProject(foundItem);
+				document.title = `${foundItem.title} - Nicolás Demianiw`;
 			})
-			.catch((error) => console.log(error));
+			.catch((error) => {
+				throw new Error(error.message);
+			});
+		return () => {
+			document.title = `Home - Nicolás Demianiw`;
+		};
 	}, []);
 
 	return (

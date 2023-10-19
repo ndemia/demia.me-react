@@ -20,7 +20,9 @@ export default function Home({ themeToggler }) {
 			.then((description) => {
 				setDescription(description);
 			})
-			.catch((error) => console.log(error));
+			.catch((error) => {
+				throw new Error(error.message);
+			});
 	}, []);
 
 	return (
