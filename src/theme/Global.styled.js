@@ -11,14 +11,6 @@ export const GlobalStyles = createGlobalStyle`
 
   @font-face {
     font-family: 'Work Sans';
-    src: url('/fonts/WorkSans-Medium.ttf') format('truetype');
-    font-weight: 500;
-    font-style: normal;
-    font-display: swap;
-  }
-
-  @font-face {
-    font-family: 'Work Sans';
     src: url('/fonts/WorkSans-Bold.ttf') format('truetype');
     font-weight: 700;
     font-style: normal;
