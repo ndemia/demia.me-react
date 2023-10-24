@@ -5,7 +5,6 @@ export const StyledImage = styled.figure`
 	top: 0;
 	left: 0;
 	border: 1px solid ${({ theme }) => theme.colors.beige03};
-	transition: ${({ theme }) => theme.transition};
 
 	&::after {
 		content: '';
