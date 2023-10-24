@@ -2,9 +2,11 @@ import { useEffect, useState } from 'react';
 import { Routes, Route } from 'react-router-dom';
 import { useProjects } from './context/ProjectsContext';
 
+// Components.
 import Home from './pages/Home/Home';
 import ProjectDetails from './pages/ProjectDetails/ProjectDetails';
 
+// Styles.
 import { ThemeProvider } from 'styled-components';
 import { GlobalStyles } from './theme/Global.styled';
 import { defaultTheme, dosTheme } from './theme/Themes';
@@ -12,6 +14,7 @@ import { defaultTheme, dosTheme } from './theme/Themes';
 export default function App() {
 	const [theme, setTheme] = useState('default');
 
+	// Function that sets the active theme.
 	const themeToggler = () => {
 		if (theme === 'default') {
 			setTheme('dos');

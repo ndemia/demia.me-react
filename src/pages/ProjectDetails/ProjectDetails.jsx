@@ -30,7 +30,7 @@ export default function ProjectDetails({ themeToggler }) {
 		<StyledLayoutContainer>
 			<Navigation />
 			{filteredProject && <ProjectHeader project={filteredProject} themeToggler={themeToggler} />}
-			{filteredProject && <RightSection type="project" project={filteredProject} />}
+			{filteredProject && <RightSection type="project" project={filteredProject} isLoading={isLoading} />}
 			<Footer />
 		</StyledLayoutContainer>
 	);
