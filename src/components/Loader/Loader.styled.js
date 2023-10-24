@@ -5,6 +5,10 @@ export const StyledLoader = styled.div`
 	margin: 0 auto;
 	border: 1px solid ${({ theme }) => theme.colors.beige01};
 	padding: 6px;
+	background-image: ${({ theme }) => (theme.name === 'defaultTheme' ? 'initial' : 'url(../public/images/pixel.png)')};
+	background-repeat: ${({ theme }) => (theme.name === 'defaultTheme' ? 'initial' : 'repeat')};
+	background-blend-mode: ${({ theme }) => (theme.name === 'defaultTheme' ? 'initial' : 'luminosity')};
+	background-color: ${({ theme }) => (theme.name === 'defaultTheme' ? 'initial' : 'hsl(41, 100%, 50%)')};
 
 	span {
 		display: block;
