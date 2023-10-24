@@ -6,12 +6,12 @@ import { useProjects } from '../../context/ProjectsContext';
 
 export default function Projects() {
 	const title = 'Projects';
-	const [projects, setProjects] = useProjects();
+	const [projects, isLoading] = useProjects();
 
 	return (
 		<StyledProjects>
 			<ArticleTitle text={title}></ArticleTitle>
-			<ProjectList projects={projects}></ProjectList>
+			{isLoading ? <div>Loading...</div> : <ProjectList projects={projects}></ProjectList>}
 		</StyledProjects>
 	);
 }

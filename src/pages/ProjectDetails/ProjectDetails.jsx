@@ -1,5 +1,5 @@
-import { useEffect, useState } from 'react';
-import { useParams, useLocation } from 'react-router-dom';
+import { useEffect } from 'react';
+import { useParams } from 'react-router-dom';
 import { useProjects } from '../../context/ProjectsContext';
 
 import { StyledLayoutContainer } from '../../components/LayoutContainer/LayoutContainer.styled';
@@ -10,19 +10,16 @@ import Footer from '../../components/Footer/Footer';
 
 export default function ProjectDetails({ themeToggler }) {
 	const { id } = useParams();
-	const { state } = useLocation();
-	const [projects, setProjects] = useProjects();
-	const [project, setProject] = useState({});
+	const [projects, isLoading] = useProjects();
+	const filteredProject = projects.find((project) => project.id === id);
+
+	// Change HTML title.
+	if (filteredProject) {
+		document.title = `${filteredProject.title} - Nicolás Demianiw`;
+	}
 
 	useEffect(() => {
-		// Filter projects to find the correct one to show.
-		let foundItem = projects.find((project) => project.id === id);
-
-		// Set it.
-		setProject(foundItem);
-
-		// Change HTML title.
-		document.title = `${foundItem.title} - Nicolás Demianiw`;
+		// Change back title when unmounting component.
 		return () => {
 			document.title = `Home - Nicolás Demianiw`;
 		};
@@ -31,8 +28,14 @@ export default function ProjectDetails({ themeToggler }) {
 	return (
 		<StyledLayoutContainer>
 			<Navigation />
-			{project && <ProjectHeader project={project} themeToggler={themeToggler} />}
-			{project && <RightSection project={project} type="project" />}
+			{isLoading === true ? (
+				<div>Loading...</div>
+			) : (
+				<>
+					<ProjectHeader project={filteredProject} themeToggler={themeToggler} />
+					<RightSection project={filteredProject} type="project" />
+				</>
+			)}
 			<Footer />
 		</StyledLayoutContainer>
 	);
