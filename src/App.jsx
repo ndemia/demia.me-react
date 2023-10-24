@@ -5,6 +5,7 @@ import { useProjects } from './context/ProjectsContext';
 // Components.
 import Home from './pages/Home/Home';
 import ProjectDetails from './pages/ProjectDetails/ProjectDetails';
+import ScrollToTop from './components/ScrollToTop/ScrollToTop';
 
 // Styles.
 import { ThemeProvider } from 'styled-components';
@@ -61,6 +62,7 @@ export default function App() {
 		<ThemeProvider theme={theme === 'default' ? defaultTheme : dosTheme}>
 			<>
 				<GlobalStyles />
+				<ScrollToTop />
 				<Routes>
 					<Route path="/" element={<Home themeToggler={themeToggler} theme={theme} />} />
 					<Route path="/:id" element={<ProjectDetails themeToggler={themeToggler} />} />
