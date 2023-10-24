@@ -31,7 +31,7 @@ export default function Home({ themeToggler }) {
 	return (
 		<StyledLayoutContainer>
 			<Header title="Nicolás Demianiw" themeToggler={themeToggler} />
-			{description && <RightSection type="description" content={description} isLoading={isLoading} />}
+			{description && <RightSection type="description" project={description} isLoading={isLoading} />}
 			<Main />
 			<Footer />
 		</StyledLayoutContainer>
