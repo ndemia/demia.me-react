@@ -14,7 +14,7 @@ export const StyledFooter = styled.footer`
 	}
 
 	article {
-		font-size: 1rem;
+		font-size: ${({ theme }) => theme.fontSizes.small};
 		color: ${({ theme }) => theme.colors.beige01};
 		margin-bottom: 0.5rem;
 

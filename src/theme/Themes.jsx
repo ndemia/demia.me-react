@@ -14,6 +14,7 @@ export const defaultTheme = {
 	},
 	fonts: "'Work Sans', 'Inter', 'Open Sans', 'sans-serif'",
 	fontSizes: {
+		small: '0.9rem',
 		base: '1rem',
 	},
 	fontWeights: {
@@ -54,6 +55,7 @@ export const dosTheme = {
 	},
 	fonts: "'437', 'monospace'",
 	fontSizes: {
+		small: '1rem',
 		base: '1.1rem',
 	},
 	fontWeights: {
