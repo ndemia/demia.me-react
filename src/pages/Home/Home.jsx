@@ -8,6 +8,7 @@ import Footer from '../../components/Footer/Footer';
 
 export default function Home({ themeToggler }) {
 	const [description, setDescription] = useState({});
+	const [isLoading, setIsLoading] = useState(true);
 
 	const fetchDescription = async () => {
 		let response = await fetch('/data/description.json');
@@ -19,16 +20,18 @@ export default function Home({ themeToggler }) {
 		fetchDescription()
 			.then((description) => {
 				setDescription(description);
+				setIsLoading(false);
 			})
 			.catch((error) => {
 				throw new Error(error.message);
+				setIsLoading(false);
 			});
 	}, []);
 
 	return (
 		<StyledLayoutContainer>
 			<Header title="Nicolás Demianiw" themeToggler={themeToggler} />
-			{description && <RightSection project={description} type="description" />}
+			{description && <RightSection type="description" project={description} isLoading={isLoading} />}
 			<Main />
 			<Footer />
 		</StyledLayoutContainer>

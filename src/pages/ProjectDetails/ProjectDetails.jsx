@@ -7,6 +7,7 @@ import Navigation from '../../components/Navigation/Navigation';
 import ProjectHeader from '../../components/ProjectHeader/ProjectHeader';
 import RightSection from '../../components/RightSection/RightSection';
 import Footer from '../../components/Footer/Footer';
+import Loader from '../../components/Loader/Loader';
 
 export default function ProjectDetails({ themeToggler }) {
 	const { id } = useParams();
@@ -28,14 +29,8 @@ export default function ProjectDetails({ themeToggler }) {
 	return (
 		<StyledLayoutContainer>
 			<Navigation />
-			{isLoading === true ? (
-				<div>Loading...</div>
-			) : (
-				<>
-					<ProjectHeader project={filteredProject} themeToggler={themeToggler} />
-					<RightSection project={filteredProject} type="project" />
-				</>
-			)}
+			{filteredProject && <ProjectHeader project={filteredProject} themeToggler={themeToggler} />}
+			{filteredProject && <RightSection type="project" project={filteredProject} />}
 			<Footer />
 		</StyledLayoutContainer>
 	);

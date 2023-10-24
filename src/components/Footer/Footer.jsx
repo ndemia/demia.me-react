@@ -5,8 +5,8 @@ export default function Footer() {
 	const currently = {
 		book: 'History of Beauty',
 		author: 'Umberto Eco',
-		band: 'Grails',
-		album: 'Anches En Maat',
+		artist: 'Emma Ruth Rundle',
+		album: 'Electric Guitar One',
 	};
 
 	return (
@@ -23,11 +23,11 @@ export default function Footer() {
 				<article>
 					<p>Latest commit's soundtrack:</p>
 					<p>
-						<span>{currently.band}</span> - <span>{currently.album}</span>
+						<span>{currently.artist}</span> - <span>{currently.album}</span>
 					</p>
 				</article>
 				<article>
-					<span>Made with 🍺, React & Styled Components. Deployed on Netlify.</span>
+					<span>Made by yours truly with 🍺, React & Styled Components. Deployed on Netlify.</span>
 				</article>
 				<article className="firefox hidden">
 					<span>

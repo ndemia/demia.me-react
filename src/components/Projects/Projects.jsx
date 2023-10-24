@@ -1,17 +1,17 @@
-import { useState, useEffect } from 'react';
+import { useProjects } from '../../context/ProjectsContext';
 import { StyledProjects } from './Projects.styled';
 import ArticleTitle from '../ArticleTitle/ArticleTitle';
 import ProjectList from '../ProjectList/ProjectList';
-import { useProjects } from '../../context/ProjectsContext';
+import Loader from '../Loader/Loader';
 
 export default function Projects() {
-	const title = 'Projects';
 	const [projects, isLoading] = useProjects();
+	const title = 'Projects';
 
 	return (
 		<StyledProjects>
 			<ArticleTitle text={title}></ArticleTitle>
-			{isLoading ? <div>Loading...</div> : <ProjectList projects={projects}></ProjectList>}
+			{isLoading === true ? <Loader /> : <ProjectList projects={projects}></ProjectList>}
 		</StyledProjects>
 	);
 }
