@@ -68,7 +68,7 @@ export const dosTheme = {
 		none: '0',
 		base: '-0.5px',
 	},
-	backgroundImage: 'url(public/images/pixel.png)',
+	backgroundImage: 'url(/images/pixel.png)',
 	backgroundRepeat: 'repeat',
 	backgroundBlendMode: 'luminosity',
 	backgroundColor: 'hsl(41, 100%, 50%)',
