@@ -16,7 +16,7 @@ export const StyledFooter = styled.footer`
 	article {
 		font-size: ${({ theme }) => theme.fontSizes.small};
 		color: ${({ theme }) => theme.colors.beige01};
-		margin-bottom: 0.5rem;
+		margin-bottom: 0.25rem;
 
 		&:first-child > p > span:first-child {
 			font-style: italic;

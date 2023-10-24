@@ -26,14 +26,14 @@ export default function Footer() {
 						<span>{currently.artist}</span> - <span>{currently.album}</span>
 					</p>
 				</article>
-				<article>
-					<span>Made by yours truly with 🍺, React & Styled Components. Deployed on Netlify.</span>
-				</article>
 				<article className="firefox hidden">
 					<span>
-						Hi again! Consider using &nbsp;
+						Hi again! Thanks for visiting. Please consider using&nbsp;
 						<InlineLink to={'https://firefox.com/'} text={'Firefox'} />, a web browser that respects your privacy and the open web.
 					</span>
+				</article>
+				<article>
+					<span>Made by yours truly with 🍺, React & Styled Components. Deployed on Netlify.</span>
 				</article>
 			</div>
 		</StyledFooter>
