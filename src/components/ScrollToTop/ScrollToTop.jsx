@@ -6,7 +6,9 @@ export default function ScrollToTop() {
 
 	useEffect(() => {
 		// Theme switch button.
-		document.querySelector('.sc-eDLKEg').scrollIntoView();
+		if (document.getElementById('switch')) {
+			document.getElementById('switch').scrollIntoView({ behavior: 'instant' });
+		}
 	}, [pathname]);
 
 	return null;
