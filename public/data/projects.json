@@ -18,7 +18,7 @@
 				},
 				{
 					"type": "paragraph",
-					"text": "Until now, this assignment has been the most difficult one. It's great to say that I've been able to correct a lot of previous mistakes that I've made in the first iteration of this project."
+					"text": "Second installment in my series of interview tests. This time for a SaaS company specialized in workspace software. Until now, this assignment has been the most difficult one. It's great to say that I've been able to correct a lot of previous mistakes that I've made in the first iteration of this project."
 				},
 				{
 					"type": "title",
@@ -59,10 +59,24 @@
 						"Make “Buy” button in the top bar show the dialog which will allow user to buy available items (to be displayed in a modal).",
 						"Users can see available items and their price, can type in an amount to buy (integer value), or increment/decrement it with buttons + and -.",
 						"Total cost is calculated in real-time and reflects changes to the amount. If the total cost exceeds available money, message appears and buy button is disabled.",
-						"When user clicks 'Buy', dialog is closed, item stocks are updated and user balance is updated. There is no need to store bought items.User can also close the dialog via cancel or close buttons.",
+						"When user clicks 'Buy', dialog is closed, item stocks are updated and user balance is updated. There is no need to store bought items. User can also close the dialog via cancel or close buttons.",
 						"Make sure constraints with regard to number of items available and user balance are not violated.",
 						"Make sure feedback is available to users if they cannot accomplish the action (e.g. item is no longer available or a request to the backend fails).",
 						"A 'random' failure request is implemented for the “Buy” request (e.g. once every 3 requests) and the failure is handled."
+					]
+				},
+				{
+					"type": "title",
+					"text": "Implementation requirements"
+				},
+				{
+					"type": "list",
+					"items": [
+						"Existing features should continue to function.",
+						"The domain logic described for the dialog is implemented (real-time updating, constraints/validation checks, updating of the user/stock on purchase, feedback on failure).",
+						"A “random” failure request is implemented for the 'Buy' request (e.g. once every 3 requests) and the failure is handled.",
+						"You don't need to have any database or backend (changes) though if you feel like giving it a try, you can. We do however expect you to write a service / proxy which returns promises to simulate requests to the backend (preferable including some random failures).",
+						"The original test used jQuery but since I'm learning TypeScript, I decided to do use it for this iteration of the project."
 					]
 				},
 				{
@@ -71,11 +85,15 @@
 				},
 				{
 					"type": "paragraph",
-					"text": "The first time I did this project I didn't comprehend that the fake database worked as an API, and replaced it with a Class. It worked, but it was not the original intention. For this new iteration, I corrected this mistake, and reverted to the original code. It didn't come without its challenges."
+					"text": "The first time I did this project I didn't comprehend that the database worked as an API, and replaced it with a Class. It worked, but it was not the original intention. For this new iteration, I corrected this mistake and reverted to the original code to keep that core functionality and worked with that."
 				},
 				{
 					"type": "paragraph",
-					"text": "The API handled requests for each information individually, which makes sense: you request the user, or you request the stock. Each request has a 1 in 3 chances to fail (by design). A lot of the checks during the purchasing process depend on this calls to validate the available item quantity. As well as the item's price, specially when calculating total prices. With so many checks, calls, and potential failures, the challenge was to keep calls to a minimun. Which I managed to achieve! Once that was done successfully, I just passed that information around between the functions or elements that would need it."
+					"text": "The API handled requests for each piece of information individually, which makes sense: you request the user, or you request the stock. Each request has a 1 in 3 chance to fail (by design). A lot of the logic of the checks during the purchasing process depends on these calls to validate the available item quantity, for example. As well as the item's price, especially when calculating total prices. With so many checks, calls, and potential failures, the challenge was to keep calls to a minimum, which I managed to achieve! Now it only makes one call to the API, and then it just passes that information around between the functions that need it."
+				},
+				{
+					"type": "paragraph",
+					"text": "Another challenge arose from creating the validation checks during the purchasing process. It was hard, and also confusing at times with many functions checking different values, for them to later refer to or use one another, or its return value."
 				},
 				{
 					"type": "title",
@@ -83,15 +101,11 @@
 				},
 				{
 					"type": "paragraph",
-					"text": " I learned about the inert attribute (and its polyfill), and how to use it to 'disable' parts of the website so that they are not keyboard accessible. In this particular case, disabling the 'back' of the website while the modal is open."
+					"text": "I got more comfortable using a screen-reader. I learned about the inert attribute (and its polyfill), and how to use it to 'disable' parts of the website so that they would not be keyboard accessible. In this particular case, disabling the 'back' of the website while the modal is open."
 				},
 				{
 					"type": "paragraph",
-					"text": "I also got familiar with 'aria-live' and 'role' attributes so that screen readers can announce changes in the UI. For example, prices updating, alerts and error messages."
-				},
-				{
-					"type": "paragraph",
-					"text": "And finally, I got more comfortable with aria-label, aria-hidden, and improving keyboard navigation."
+					"text": "I also got familiar with 'aria-live' and 'role' attributes so that screen readers can announce changes in the UI. For example, when prices update, alerts and error messages appear. Finally, I got more comfortable with aria-label, aria-hidden, and improving keyboard navigation overall."
 				},
 				{
 					"type": "title",
@@ -125,7 +139,7 @@
 				},
 				{
 					"type": "paragraph",
-					"text": "Another of my interview test series. This time around, I did manage to pass the technical assessment! With some good parts and some bad parts, of course."
+					"text": "The third installment series of interview tests. This assignment was part of the process for a position at a payments processor company. It's great to realize that I managed to make a lot of improvements from what I originally did."
 				},
 				{
 					"type": "title",
@@ -140,8 +154,13 @@
 					"text": "Requirements"
 				},
 				{
-					"type": "paragraph",
-					"text": "The assignment was meant to be completed in vanilla JavaScript, without any frameworks or libraries. I've rebuilt it using TypeScript, improving it wherever I could, and to get more familiar with it.I was not allowed to use any framework to make the request (Axios or similar). UI frameworks were allowed but highly discouraged.Mobile-first approach.Each result should have its own card (or among those lines, can't remember exactly as it was long ago and I haven't kept the documentation).There has to be a top bar, where the search box will be located. I'm going to ditch this, just to have more flexibility :)"
+					"type": "list",
+					"items": [
+						"The assignment was meant to be completed in vanilla JavaScript, without any frameworks or libraries, but to practice I've rebuilt it using TypeScript this time.",
+						"It was not allowed to use any external libraries to make the request either (Axios or similar).",
+						"Mobile-first approach.",
+						"Each result should have its own card (or among those lines, can't remember exactly as it was long ago and I haven't kept the documentation)."
+					]
 				},
 				{
 					"type": "title",
@@ -149,15 +168,15 @@
 				},
 				{
 					"type": "paragraph",
-					"text": "It was my first time dealing with pagination and it was the most dificult part. I had to rely on a third party solution to accomplish it, but not before understanding how it works. Although I do need to practice it more often ;) "
+					"text": "It was my first time dealing with pagination and it was the most difficult part. I had to rely on a third-party solution to accomplish it, but not before understanding how it works. Although I do need to practice it more often, since it's still complicated to achieve. "
 				},
 				{
 					"type": "paragraph",
-					"text": "Dealing with the card layout was also tricky, since there's always going to be some undesired whitespace, whether inside the car to match all the heights, or outside to avoid it. I chose the latter one."
+					"text": "Dealing with the card layout was also tricky since there's always going to be some undesired whitespace, whether inside the car to match all the heights, or outside to avoid it. I chose the latter one in this case."
 				},
 				{
 					"type": "paragraph",
-					"text": "Learning how to manage and hide the API key, in order to be able to publish the project on GitHub, also took some time to properly grasp."
+					"text": "Another challenge was learning how to manage and hide the API key. I didn't manage it the first time I did this assignment, but this time I did. And it's pretty cool, since I also learned about Netlify which I use until today."
 				},
 				{
 					"type": "title",
@@ -169,7 +188,7 @@
 				},
 				{
 					"type": "paragraph",
-					"text": "Learned about Netlify, hiding API keys in environment variables, and deploying to it."
+					"text": "I got more comfortable with asynchronous code in general, as well as with TypeScript. Learned about Netlify, working with external APIs, hiding API keys in environment variables, and deploying the project. Got more familiar with testing accessibility (keyboard navigation and using screen-readers)."
 				},
 				{
 					"type": "paragraph",
@@ -241,19 +260,19 @@
 				},
 				{
 					"type": "title",
-					"text": "Process"
-				},
-				{
-					"type": "paragraph",
-					"text": "First, I had to dig around the website's code to understand its structure. I found out that the website had two forms, one for desktop and another one for mobile, and the mobile form was the one that actually processed the form. I also discovered that it used localStorage to save previously searched flights. Being a detective can be fun. Design-wise, I made the results blend with the rest of the website, which looked nice and was appreciated."
-				},
-				{
-					"type": "title",
 					"text": "Problems"
 				},
 				{
 					"type": "paragraph",
-					"text": "Due to my lack of knowledge at that particular moment in time, I had to hard-code some values, and overall my code was not scalable. It still worked though! hehe."
+					"text": "In the beginning, I wasn't quite sure how I could make it work through the console considering the fact that when the browser reloads, everything was lost. I also had to add the functionality to the form so that the results would be saved. Also, due to my lack of knowledge at that particular time, I had to hard-code some values, and overall my code was not scalable. It still worked though! hehe."
+				},
+				{
+					"type": "title",
+					"text": "Process"
+				},
+				{
+					"type": "paragraph",
+					"text": "First, I had to dig around the website's code to understand its structure. I found out that the website had two forms, one for desktop and another for mobile, and only the mobile form was the one that actually processed the data. I also discovered that it used localStorage to save information. Being a detective can be fun. So from there it was a matter of adding the functionality to the form to get the data and save it using localStorage. Then I would run another function from the console that would check for saved flights, and show them if there were any. Design-wise, I made the results blend with the rest of the website, which looked nice and was appreciated. The CSS was all added through JavaScript."
 				},
 				{
 					"type": "title",
@@ -261,7 +280,7 @@
 				},
 				{
 					"type": "paragraph",
-					"text": "I'd say I'm much more conscious about making my code scalable by learning and applying best practices. I also don't hard-code values anymore. I didn't get the job, but I was still proud of what I had achieved. Now that my skills have improved, I look back at this assignment fondly."
+					"text": "I have to say that injecting the code from the console was pretty cool (hacker vibes). This was the first time I learned about localStorage as an alternative to cookies too. More importantly, I'd say I'm much more conscious about making my code scalable by learning and trying to apply best practices. I also don't hard-code values anymore... as far as I know. I didn't get the job, but I was still proud of what I had achieved. Now that my skills have improved, I look at this assignment fondly."
 				}
 			]
 		}
