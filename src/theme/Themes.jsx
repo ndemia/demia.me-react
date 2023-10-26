@@ -29,10 +29,10 @@ export const defaultTheme = {
 		none: 'normal',
 		base: 'normal',
 	},
-	backgroundImage: 'none',
+	backgroundImage: 'initial',
 	backgroundRepeat: 'no-repeat',
 	backgroundBlendMode: 'normal',
-	backgroundColor: 'none',
+	backgroundColor: 'unset',
 	background: 'linear-gradient(to bottom right, hsl(260, 6%, 35%) 0%, hsl(260, 6%, 15%) 100%)',
 	transition: 'all 200ms ease-in-out',
 	svgSizes: {
@@ -75,7 +75,7 @@ export const dosTheme = {
 	backgroundBlendMode: 'luminosity',
 	backgroundColor: 'hsl(41, 100%, 50%)',
 	background: 'hsl(3, 31%, 10%)',
-	transition: 'none',
+	transition: 'unset',
 	svgSizes: {
 		small: '0.8rem',
 		regular: '1rem',
