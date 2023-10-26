@@ -3,7 +3,6 @@ import { StyledHeader } from '../Header/Header.styled';
 
 export const StyledProjectHeader = styled(StyledHeader)`
 	@media (min-width: 60em) {
-		heigth: fit-content;
 		grid-column-start: 1;
 		grid-column-end: 2;
 		grid-row-start: 2;
