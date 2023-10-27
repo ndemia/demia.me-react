@@ -8,6 +8,7 @@ import ProjectHeader from '../../components/ProjectHeader/ProjectHeader';
 import RightSection from '../../components/RightSection/RightSection';
 import Footer from '../../components/Footer/Footer';
 import Loader from '../../components/Loader/Loader';
+import NotFound404 from '../../components/NotFound404/NotFound404';
 
 export default function ProjectDetails({ themeToggler }) {
 	const { id } = useParams();
@@ -28,10 +29,16 @@ export default function ProjectDetails({ themeToggler }) {
 
 	return (
 		<StyledLayoutContainer>
-			<Navigation />
-			{filteredProject && <ProjectHeader project={filteredProject} themeToggler={themeToggler} />}
-			{filteredProject && <RightSection type="project" project={filteredProject} isLoading={isLoading} />}
-			<Footer />
+			{!filteredProject ? (
+				<NotFound404 />
+			) : (
+				<>
+					<Navigation />
+					{filteredProject && <ProjectHeader project={filteredProject} themeToggler={themeToggler} />}
+					{filteredProject && <RightSection type="project" project={filteredProject} isLoading={isLoading} />}
+					<Footer />
+				</>
+			)}
 		</StyledLayoutContainer>
 	);
 }

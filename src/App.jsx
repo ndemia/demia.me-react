@@ -6,6 +6,7 @@ import { useProjects } from './context/ProjectsContext';
 import Home from './pages/Home/Home';
 import ProjectDetails from './pages/ProjectDetails/ProjectDetails';
 import ScrollToTop from './components/ScrollToTop/ScrollToTop';
+import NotFound404 from './components/NotFound404/NotFound404';
 
 // Styles.
 import { ThemeProvider } from 'styled-components';
@@ -64,8 +65,9 @@ export default function App() {
 				<GlobalStyles />
 				<ScrollToTop />
 				<Routes>
+					<Route path="*" element={<NotFound404 />} />
 					<Route path="/" element={<Home themeToggler={themeToggler} theme={theme} />} />
-					<Route path="/:id" element={<ProjectDetails themeToggler={themeToggler} />} />
+					<Route path="/project/:id" element={<ProjectDetails themeToggler={themeToggler} />} />
 				</Routes>
 			</>
 		</ThemeProvider>
