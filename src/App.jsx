@@ -54,7 +54,7 @@ export default function App() {
 		adaptFavicon();
 
 		// Display Firefox message if browser != Firefox.
-		if (window.chrome) {
+		if (window.chrome && document.querySelector('.firefox')) {
 			document.querySelector('.firefox').classList.remove('hidden');
 		}
 	}, []);
