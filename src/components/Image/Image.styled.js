@@ -26,6 +26,7 @@ export const StyledImage = styled.figure`
 	img {
 		display: block;
 		width: 100%;
+		height: auto;
 		filter: grayscale(60%);
 		transition: filter ${({ theme }) => theme.transition};
 	}
