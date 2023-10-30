@@ -3,6 +3,7 @@ import { useParams } from 'react-router-dom';
 import { useProjects } from '../../context/ProjectsContext';
 
 import { StyledLayoutContainer } from '../../components/LayoutContainer/LayoutContainer.styled';
+import Switch from '../../components/Switch/Switch';
 import Navigation from '../../components/Navigation/Navigation';
 import ProjectHeader from '../../components/ProjectHeader/ProjectHeader';
 import RightSection from '../../components/RightSection/RightSection';
@@ -33,8 +34,9 @@ export default function ProjectDetails({ themeToggler }) {
 				<NotFound404 />
 			) : (
 				<>
+					<Switch themeToggler={themeToggler} />
 					<Navigation />
-					{filteredProject && <ProjectHeader project={filteredProject} themeToggler={themeToggler} />}
+					{filteredProject && <ProjectHeader project={filteredProject} />}
 					{filteredProject && <RightSection type="project" project={filteredProject} isLoading={isLoading} />}
 					<Footer />
 				</>

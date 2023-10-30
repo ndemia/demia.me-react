@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 
 import { StyledLayoutContainer } from '../../components/LayoutContainer/LayoutContainer.styled';
+import Switch from '../../components/Switch/Switch';
 import Header from '../../components/Header/Header';
 import RightSection from '../../components/RightSection/RightSection';
 import Main from '../../components/Main/Main';
@@ -30,7 +31,8 @@ export default function Home({ themeToggler }) {
 
 	return (
 		<StyledLayoutContainer>
-			<Header title="Nicolás Demianiw" themeToggler={themeToggler} />
+			<Switch themeToggler={themeToggler} />
+			<Header title="Nicolás Demianiw" />
 			{description && <RightSection type="description" project={description} isLoading={isLoading} />}
 			<Main />
 			<Footer />

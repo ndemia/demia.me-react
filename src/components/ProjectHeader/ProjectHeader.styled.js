@@ -8,6 +8,9 @@ export const StyledProjectHeader = styled(StyledHeader)`
 		grid-row-start: 2;
 		grid-row-end: 2;
 		padding-top: 0;
+		position: sticky;
+		top: calc(2rem + 7.625rem);
+		height: fit-content;
 	}
 
 	figure {
