@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { Routes, Route } from 'react-router-dom';
+import { Routes, Route, useLocation } from 'react-router-dom';
 import { useProjects } from './context/ProjectsContext';
 
 // Components.
@@ -15,6 +15,7 @@ import { defaultTheme, dosTheme } from './theme/Themes';
 
 export default function App() {
 	const [theme, setTheme] = useState('default');
+	let location = useLocation();
 
 	// Function that sets the active theme.
 	const themeToggler = () => {
@@ -57,7 +58,7 @@ export default function App() {
 		if (window.chrome && document.querySelector('.firefox')) {
 			document.querySelector('.firefox').classList.remove('hidden');
 		}
-	}, []);
+	}, [location]);
 
 	return (
 		<ThemeProvider theme={theme === 'default' ? defaultTheme : dosTheme}>
