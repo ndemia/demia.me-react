@@ -5,4 +5,5 @@ export const StyledMainTitle = styled.h1`
 	font-weight: ${({ theme }) => theme.fontWeights.bold};
 	color: ${({ theme }) => theme.colors.beige01};
 	letter-spacing: -0.8px;
+	line-height: 1;
 `;

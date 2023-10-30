@@ -1,6 +1,12 @@
 import styled from 'styled-components';
 
 export const StyledProjectItem = styled.li`
+	padding-bottom: 1rem;
+
+	@media (min-width: 40em) {
+		padding-bottom: 0;
+	}
+
 	a {
 		display: block;
 		padding-bottom: 1rem;

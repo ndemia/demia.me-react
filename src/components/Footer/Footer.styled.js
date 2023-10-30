@@ -31,4 +31,8 @@ export const StyledFooter = styled.footer`
 			color: ${({ theme }) => theme.colors.beige02};
 		}
 	}
+
+	.firefox {
+		padding-bottom: 0.5rem;
+	}
 `;
