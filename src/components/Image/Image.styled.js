@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 
 export const StyledImage = styled.figure`
+	width: fit-content;
 	position: relative;
 	top: 0;
 	left: 0;
