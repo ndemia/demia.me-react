@@ -5,8 +5,8 @@ export default function Footer() {
 	const currently = {
 		book: 'History of Beauty',
 		author: 'Umberto Eco',
-		artist: 'Emma Ruth Rundle',
-		album: 'Electric Guitar One',
+		artist: 'Ben Frost',
+		album: 'The Centre Cannot Hold',
 	};
 
 	return (
