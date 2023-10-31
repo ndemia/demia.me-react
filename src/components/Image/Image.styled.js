@@ -28,6 +28,6 @@ export const StyledImage = styled.figure`
 		width: 100%;
 		height: auto;
 		filter: grayscale(60%);
-		transition: filter ${({ theme }) => theme.transition};
+		transition: ${({ theme }) => theme.transition};
 	}
 `;
