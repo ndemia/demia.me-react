@@ -68,7 +68,8 @@ export const StyledProjectItem = styled.li`
 	}
 
 	h4 {
-		font-size: 1.2rem;
+		font-family: ${({ theme }) => theme.fonts.sans};
+		font-size: 1.5rem;
 		font-weight: ${({ theme }) => theme.fontWeights.bold};
 		border-bottom: 1px solid transparent;
 		transition: all 800ms ease-in;
@@ -95,6 +96,7 @@ export const StyledProjectItem = styled.li`
 	}
 
 	p {
+		font-family: ${({ theme }) => theme.fonts.serif};
 		color: ${({ theme }) => theme.colors.beige01};
 		margin-bottom: 1.2rem;
 	}
@@ -106,6 +108,7 @@ export const StyledProjectItem = styled.li`
 		gap: 0.5rem;
 
 		li {
+			font-family: ${({ theme }) => theme.fonts.sans};
 			font-size: 0.8rem;
 			font-weight: 400;
 			color: ${({ theme }) => theme.colors.beige01};

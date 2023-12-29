@@ -2,18 +2,34 @@ import { createGlobalStyle } from 'styled-components';
 
 export const GlobalStyles = createGlobalStyle`
   @font-face {
-	font-family: 'Work Sans';
-	src: url('/fonts/WorkSans-Regular.ttf') format('truetype');
-	font-weight: 400;
-	font-style: normal;
-	font-display: swap;
+    font-family: 'Work Sans';
+    src: url('/fonts/WorkSans-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
   }
 
   @font-face {
     font-family: 'Work Sans';
     src: url('/fonts/WorkSans-Bold.ttf') format('truetype');
     font-weight: 700;
+    font-style: bold;
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: 'Bitter';
+    src: url('/fonts/Bitter-Regular.ttf') format('truetype');
+    font-weight: 400;
     font-style: normal;
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: 'Bitter';
+    src: url('/fonts/Bitter-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: bold;
     font-display: swap;
   }
 

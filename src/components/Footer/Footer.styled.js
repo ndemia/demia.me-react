@@ -14,25 +14,24 @@ export const StyledFooter = styled.footer`
 	}
 
 	article {
+		font-family: ${({ theme }) => theme.fonts.sans};
 		font-size: ${({ theme }) => theme.fontSizes.small};
 		color: ${({ theme }) => theme.colors.beige01};
-		margin-bottom: 0.25rem;
+		margin-bottom: 0.5rem;
 
-		&:first-child > p > span:first-child {
-			font-style: italic;
+		&:not(:last-child) {
+			font-family: ${({ theme }) => theme.fonts.serif};
+			font-size: ${({ theme }) => theme.fontSizes.smaller};
+			letter-spacing: ${({ theme }) => theme.letterSpacing.wide};
 		}
 
 		&:nth-child(2) {
 			margin-bottom: 2.5rem;
 		}
 
-		p:first-of-type {
-			letter-spacing: ${({ theme }) => theme.letterSpacing.none};
+		p:first-of-type:not(:last-child) {
+			letter-spacing: ${({ theme }) => theme.letterSpacing.wide};
 			color: ${({ theme }) => theme.colors.beige02};
 		}
-	}
-
-	.firefox {
-		padding-bottom: 0.5rem;
 	}
 `;

@@ -16,9 +16,10 @@ export const StyledNavigation = styled.nav`
 
 	a {
 		width: min-content;
-		color: ${({ theme }) => theme.colors.beige01};
 		display: inline-flex;
 		align-items: center;
+		font-family: ${({ theme }) => theme.fonts.sans};
+		color: ${({ theme }) => theme.colors.beige01};
 		transition: ${({ theme }) => theme.transition};
 
 		&:hover {

@@ -2,6 +2,8 @@ import styled from 'styled-components';
 
 export const StyledArticleTitle = styled.h3`
 	width: fit-content;
+	font-size: 1.25rem;
+	font-family: ${({ theme }) => theme.fonts.sans};
 	font-weight: ${({ theme }) => theme.fontWeights.bold};
 	color: ${({ theme }) => theme.colors.beige01};
 	text-transform: uppercase;

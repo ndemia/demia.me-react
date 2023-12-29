@@ -12,8 +12,12 @@ export const defaultTheme = {
 		grey03: 'hsl(193, 26%, 25%)',
 		grey04: 'hsl(193, 26%, 15%)',
 	},
-	fonts: "'Work Sans', 'Inter', 'Open Sans', 'sans-serif'",
+	fonts: {
+		sans: "'Work Sans', 'Inter', 'Open Sans', 'sans-serif'",
+		serif: "'Bitter', 'Georgia', 'serif'",
+	},
 	fontSizes: {
+		smaller: '0.8rem',
 		small: '0.9rem',
 		base: '1rem',
 	},
@@ -28,6 +32,7 @@ export const defaultTheme = {
 	letterSpacing: {
 		none: 'normal',
 		base: 'normal',
+		wide: '0.025em',
 	},
 	backgroundImage: 'initial',
 	backgroundRepeat: 'no-repeat',

@@ -2,6 +2,8 @@ import styled from 'styled-components';
 import { StyledHeader } from '../Header/Header.styled';
 
 export const StyledProjectHeader = styled(StyledHeader)`
+	font-family: ${({ theme }) => theme.fonts.sans};
+
 	@media (min-width: 60em) {
 		grid-column-start: 1;
 		grid-column-end: 2;

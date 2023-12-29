@@ -3,10 +3,10 @@ import InlineLink from '../InlineLink/InlineLink';
 
 export default function Footer() {
 	const currently = {
-		book: 'History of Beauty',
-		author: 'Umberto Eco',
-		artist: 'Ben Frost',
-		album: 'The Centre Cannot Hold',
+		book: 'The Unbearable Lightness of Being',
+		author: 'Milan Kundera',
+		artist: 'Bass Communion',
+		album: 'Bass Communion II',
 	};
 
 	return (
@@ -27,7 +27,7 @@ export default function Footer() {
 					</p>
 				</article>
 				<article>
-					<span>Made by yours truly with 🍺, React & Styled Components. Deployed on Netlify.</span>
+					<p>Built with React & Styled Components. Deployed on Netlify. Made with 🍺</p>
 				</article>
 			</div>
 		</StyledFooter>

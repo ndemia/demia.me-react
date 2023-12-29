@@ -2,6 +2,7 @@ import styled from 'styled-components';
 
 export const StyledMainSubtitle = styled.h2`
 	display: inline-flex;
+	font-family: ${({ theme }) => theme.fonts.sans};
 	font-size: clamp(1rem, 1vw + 1rem, 2.5rem);
 	color: ${({ theme }) => theme.colors.beigeGrey01};
 	font-weight: ${({ theme }) => theme.fontWeights.regular};

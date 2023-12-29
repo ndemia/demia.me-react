@@ -7,6 +7,7 @@ export const StyledNotFound404 = styled.div`
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
+	font-family: ${({ theme }) => theme.fonts.sans};
 	color: ${({ theme }) => theme.colors.beige01};
 	text-align: center;
 
