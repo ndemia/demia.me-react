@@ -58,7 +58,9 @@ export const dosTheme = {
 		beigeGrey01: 'hsl(41, 100%, 50%)',
 		amberBg: 'hsl(3, 31%, 10%)',
 	},
-	fonts: "'437', 'monospace'",
+	fonts: {
+		mono: "'437', 'monospace'",
+	},
 	fontSizes: {
 		small: '1rem',
 		base: '1.1rem',

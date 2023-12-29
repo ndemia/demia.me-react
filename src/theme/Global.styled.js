@@ -118,26 +118,32 @@ export const GlobalStyles = createGlobalStyle`
     }
   }
 
+  ::selection {
+    color: ${({ theme }) => (theme.name === 'defaultTheme' ? theme.colors.grey04 : theme.colors.amberBg)};
+    background-color: ${({ theme }) => (theme.name === 'defaultTheme' ? theme.colors.beige01 : theme.colors.beige01)};
+  }
+
+  ::-webkit-scrollbar {
+    width: .5rem;
+  }
+
+  ::-webkit-scrollbar,::-webkit-scrollbar-track {
+    background: ${({ theme }) => theme.colors.grey04}
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: ${({ theme }) => theme.colors.beige01};
+  }
+
   body {
     position: relative;
+    font-family: ${({ theme }) => (theme.name === 'defaultTheme' ? theme.fonts.sans : theme.fonts.mono)};
     font-size: ${({ theme }) => theme.fontSizes.base};
     line-height: ${({ theme }) => theme.lineHeight.base};
     letter-spacing: ${({ theme }) => theme.letterSpacing.base};
     color: ${({ theme }) => theme.colors.black};
     background: ${({ theme }) => theme.background};
     scrollbar-color: ${({ theme }) => theme.colors.beige01} ${({ theme }) => theme.colors.grey04};
-
-    &::-webkit-scrollbar {
-      width: .5rem;
-    }
-
-    &::-webkit-scrollbar,::-webkit-scrollbar-track {
-      background: ${({ theme }) => theme.colors.grey04}
-    }
-
-    &::-webkit-scrollbar-thumb {
-      background: ${({ theme }) => theme.colors.beige01};
-    }
   }
 
   .sr-only {
