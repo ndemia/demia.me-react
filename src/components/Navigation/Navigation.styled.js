@@ -9,8 +9,6 @@ export const StyledNavigation = styled.nav`
 		grid-row-start: 1;
 		grid-row-end: 1;
 		padding-top: 6rem;
-		position: sticky;
-		top: 0;
 		height: fit-content;
 	}
 

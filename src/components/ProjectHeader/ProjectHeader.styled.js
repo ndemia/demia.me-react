@@ -10,8 +10,6 @@ export const StyledProjectHeader = styled(StyledHeader)`
 		grid-row-start: 2;
 		grid-row-end: 2;
 		padding-top: 0;
-		position: sticky;
-		top: 9.6875rem;
 		height: fit-content;
 	}
 
