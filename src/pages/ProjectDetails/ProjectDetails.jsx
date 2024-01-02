@@ -13,7 +13,7 @@ import NotFound404 from '../../components/NotFound404/NotFound404';
 
 export default function ProjectDetails({ themeToggler }) {
 	const { id } = useParams();
-	const [projects, isLoading] = useProjects();
+	const { projects, isLoading } = useProjects();
 	const filteredProject = projects.find((project) => project.id === id);
 
 	// Change HTML title.
@@ -37,7 +37,7 @@ export default function ProjectDetails({ themeToggler }) {
 					<Switch themeToggler={themeToggler} />
 					<Navigation />
 					{filteredProject && <ProjectHeader project={filteredProject} />}
-					{filteredProject && <RightSection type="project" project={filteredProject} isLoading={isLoading} />}
+					{filteredProject && <RightSection type="project" project={filteredProject.content} isLoading={isLoading} />}
 					<Footer />
 				</>
 			)}

@@ -5,6 +5,7 @@ import ArticleList from '../ArticleList/ArticleList';
 import InlineLink from '../InlineLink/InlineLink';
 
 export default function Article({ content }) {
+	console.log(content);
 	const renderParagraphWithLinks = (text) => {
 		const textParts = text.split(/\[([^\]]+)\]\(([^)]+)\)/g);
 

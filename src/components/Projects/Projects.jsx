@@ -5,7 +5,7 @@ import ProjectList from '../ProjectList/ProjectList';
 import Loader from '../Loader/Loader';
 
 export default function Projects() {
-	const [projects, isLoading] = useProjects();
+	const { projects, isLoading } = useProjects();
 	const title = 'Projects';
 
 	return (
