@@ -13,7 +13,7 @@ export default function Home({ themeToggler }) {
 	return (
 		<StyledLayoutContainer>
 			<Switch themeToggler={themeToggler} />
-			<Header title="Nicolás Demianiw" />
+			<Header title="Nicolás Demianiw" subtitle="Front-end Developer" />
 			{description && <RightSection type="description" project={description} isLoading={isLoading} />}
 			<Main />
 			<Footer />

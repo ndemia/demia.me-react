@@ -4,11 +4,11 @@ import Socials from '../Socials/Socials';
 
 import { StyledHeader } from './Header.styled';
 
-export default function Header({ title }) {
+export default function Header({ title, subtitle }) {
 	return (
 		<StyledHeader>
 			<MainTitle title={title}></MainTitle>
-			<MainSubtitle></MainSubtitle>
+			<MainSubtitle subtitle={subtitle}></MainSubtitle>
 			<Socials></Socials>
 		</StyledHeader>
 	);
