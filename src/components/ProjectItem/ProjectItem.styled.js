@@ -97,7 +97,7 @@ export const StyledProjectItem = styled.li`
 
 	p {
 		font-family: ${({ theme }) => theme.fonts.serif};
-		color: ${({ theme }) => theme.colors.beige01};
+		color: ${({ theme }) => theme.colors.beigeGrey01};
 		margin-bottom: 1.2rem;
 	}
 
