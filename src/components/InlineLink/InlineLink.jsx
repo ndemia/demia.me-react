@@ -5,7 +5,7 @@ export default function InlineLink({ to, text }) {
 	return (
 		<ThemeConsumer>
 			{(theme) => (
-				<StyledInlineLink href={to} target="_blank" rel="noopener noreferrer">
+				<StyledInlineLink href={to} target="_blank" rel="noopener noreferrer" aria-label={text}>
 					{text}
 					{theme.name === 'defaultTheme' ? (
 						<svg viewBox="0 0 24 24" aria-hidden="true">
