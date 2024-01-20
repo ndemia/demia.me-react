@@ -279,11 +279,7 @@
 				},
 				{
 					"type": "paragraph",
-					"text": "I got more comfortable with promises and asynchronous JavaScript in general, as well as with TypeScript."
-				},
-				{
-					"type": "paragraph",
-					"text": "I got more comfortable with asynchronous code in general. Learned about Netlify, working with external APIs, hiding API keys in environment variables, and deploying the project. Got more familiar with testing accessibility (keyboard navigation and using screen-readers)."
+					"text": "I got more comfortable with asynchronous code in general, as well as TypeScript. Learned about Netlify, working with external APIs, hiding API keys in environment variables, and deploying the project. Got more familiar with testing accessibility (keyboard navigation and using screen-readers)."
 				}
 			]
 		},
