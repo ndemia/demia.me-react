@@ -15,13 +15,12 @@ export const StyledFooter = styled.footer`
 
 	article {
 		font-family: ${({ theme }) => theme.fonts.sans};
-		font-size: ${({ theme }) => theme.fontSizes.small};
+		font-size: ${({ theme }) => theme.fontSizes.smaller};
 		color: ${({ theme }) => theme.colors.beige01};
 		margin-bottom: 0.5rem;
 
 		&:not(:last-child) {
 			font-family: ${({ theme }) => theme.fonts.serif};
-			font-size: ${({ theme }) => theme.fontSizes.smaller};
 			letter-spacing: ${({ theme }) => theme.letterSpacing.wide};
 		}
 
